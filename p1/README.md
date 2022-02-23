@@ -5,7 +5,7 @@
 + URL: <http://e15p1.brianrabil.me>
 
 ## Outside resources
-*your list of outside resources go here*
+[PHP Function Reference](https://www.php.net/manual/en/funcref.php)
 
 ## Notes for instructor
-*any notes for me to refer to while grading; if none, omit this section*
+
