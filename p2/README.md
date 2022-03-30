@@ -3,14 +3,15 @@
 + Production URL: <http://e15p2.brianrabil.com>
 
 ## Outside resources
-*your list of outside resources go here*
-https://www.codecheef.org/article/creating-dynamic-html-form-using-laravel-blade-components
 
-https://www.codecheef.org/article/create-and-use-reusable-laravel-component-like-vue-react-js
+- [Basic boiler plate](https://www.codecheef.org/article/creating-dynamic-html-form-using-laravel-blade-components)
 
-https://laravel.com/docs/9.x/blade
+- [How it compares to React](https://www.codecheef.org/article/create-and-use-reusable-laravel-component-like-vue-react-js)
 
-https://tailwindcss.com/docs/hover-focus-and-other-states
+- [Blade Docs](https://laravel.com/docs/9.x/blade)
+
+- [Event handling](https://tailwindcss.com/docs/hover-focus-and-other-states)
 
 ## Notes for instructor
-*any notes for me to refer to while grading; if none, omit this section*
+
+This is not my best work. I have been overwhelmed at work these past two weeks, and didn't get to devote as much time to this project as I originally hoped. Future submissions will be much better.
