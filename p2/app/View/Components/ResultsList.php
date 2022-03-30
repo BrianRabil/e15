@@ -1,25 +1,21 @@
 <?php
 
-namespace App\View\Components\Form;
+namespace App\View\Components;
 
 use Illuminate\View\Component;
 
-class Button extends Component
+class ResultsList extends Component
 {
-    public $type;
-
-    public $class;
+    public $results;
 
     /**
      * Create a new component instance.
      *
      * @return void
      */
-    public function __construct($type, $class = "")
+    public function __construct($results)
     {
-        $this->type = $type;
-
-        $this->class = $class;
+        $this->results = $results;
     }
 
     /**
@@ -29,6 +25,6 @@ class Button extends Component
      */
     public function render()
     {
-        return view('components.form.button');
+        return view('components.results-list');
     }
 }
