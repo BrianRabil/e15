@@ -14,7 +14,6 @@
         </style>
     </head>
     <body class="antialiased">
-        <x-navbar />
         <main class="w-full h-full">
             @yield('content')
         </main>

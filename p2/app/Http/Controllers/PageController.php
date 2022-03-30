@@ -43,10 +43,9 @@ class PageController extends Controller
     {
         # Get the form nput values (default to null if no values exist)
         $searchTerms = $request->input('searchTerms', null);
-
         $pokemonData = $this->fetchPokemonList(10);
         $pokemons = json_decode($pokemonData, true);
-        dump($pokemons);
+        $this->results = $pokemons;
         # Load our json book data and convert it to an array
         // $bookData = file_get_contents(database_path('books.json'));
         // $books = json_decode($bookData, true);
