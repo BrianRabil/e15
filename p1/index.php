@@ -90,7 +90,7 @@
                 </strong>
             </dt>
             <dd>
-                <?php echo $is_palindrome; ?>
+                <?php echo $palindrome; ?>
             </dd>
             <dt>
                 <strong>

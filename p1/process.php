@@ -1,19 +1,26 @@
 <?php
-$VOWELS = ['a', 'e', 'i', 'o', 'u'];
-
 $answer = $_GET['answer'];
 
-$is_palindrome = $answer == strrev($answer) ? "Yes" : "No";
+$palindrome = is_palindrome($answer); 
+$vowel_count = count_vowels($answer);
 
-$vowel_count = 0;
-$answer_arr = str_split($answer);
+function is_palindrome($str) {
+    return $str == strrev($str) ? "Yes" : "No";
+}
 
-foreach ($answer_arr as $letter) {
-    $lowercase_letter = strtolower($letter);
-    $is_vowel = in_array($lowercase_letter, $VOWELS);
-    if ($is_vowel) {
-        $vowel_count = $vowel_count + 1;
+function count_vowels($word) {
+    $vowels = ['a', 'e', 'i', 'o', 'u'];
+    $chars = str_split(strtolower($word));
+    $count = 0;
+
+    foreach ($chars as $char) {
+        $is_vowel = in_array($char, $vowels);
+        if ($is_vowel) {
+            $count = $count + 1;
+        }
     }
+
+    return $count;
 }
 
 require 'index.php';
