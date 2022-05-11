@@ -1,6 +1,6 @@
 <?php
 
-use App\Http\Controllers\BoxController;
+use App\Http\Controllers\CollectionsController;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\SearchController;
 use App\Http\Controllers\PokemonDetailController;
@@ -23,7 +23,7 @@ Route::get('/', function () {
 });
 Route::get('/search', [SearchController::class, 'show'])->middleware('auth');
 Route::get('/dashboard', [DashboardController::class, 'show'])->middleware('auth');
-Route::get('/boxes', [BoxController::class, 'show'])->middleware('auth');
+Route::get('/collections', [CollectionsController::class, 'show'])->middleware('auth');
 Route::get('/pokemon/{id}', [PokemonDetailController::class, 'show'])->middleware('auth');
 
 

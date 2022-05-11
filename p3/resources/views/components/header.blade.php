@@ -1,14 +1,14 @@
  <header class="bg-white h-16">
-     <div class="container h-full max-w-lrg mx-auto flex items-center justify-between">
-         <h1 class="text-lg font-bold">PokeApp!</h1>
+     <x-container class="h-full flex items-center justify-between">
+         <a href="/" class="text-lg font-bold">PokeApp!</a>
          <nav>
-             <ul class="flex align-center gap-10 text-sm font-medium text-gray-800">
+             <ul class="flex align-center gap-10 text-sm font-medium text-gray-800 hover:text-gray-600">
                  <li>
                      <a href="/search">Search</a>
                  </li>
 
                  <li>
-                     <a href="/boxes">Boxes</a>
+                     <a href="/collections">Collections</a>
                  </li>
 
                  <li class="h-6 w-1 border-l border-gray-100"></li>
@@ -19,7 +19,7 @@
                      </li>
                      <li>
                         <form method="POST" action="/logout">
-                            <button type="submit" class="text-red-600 hover:text-red-400" href="/logout">Logout</button>
+                            <button type="submit" class="hover:text-red-400" href="/logout">Logout</button>
                         </form>
                      </li>
                  @else
@@ -33,5 +33,5 @@
                  @endauth
              </ul>
          </nav>
-     </div>
+     </x-container>
  </header>

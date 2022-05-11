@@ -1,7 +1,7 @@
 <x-layout>
     <section>
         <div class="container max-w-6 mx-auto pb-6">
-            <h1 class="text-4xl font-bold text-gray-800 mb-4">Search</h1>
+            <x-page-header>Search</x-page-header>
             <div class="flex items-center">
                 <input aria-labelledby="search" />
                 <button id="search">Search</button>

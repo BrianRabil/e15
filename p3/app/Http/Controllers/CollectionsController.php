@@ -4,11 +4,11 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
-class BoxController extends Controller
+class CollectionsController extends Controller
 {
     //
 
     public function show() {
-        return view('boxes');
+        return view('collections');
     }
 }

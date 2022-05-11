@@ -1,3 +1,5 @@
 <x-layout>
-    <h1 class="text-5xl font-bold">Welcome</h1>
+    <x-container>
+        <x-page-header class="text-5xl font-bold">Welcome</x-page-header>
+    </x-container>
 </x-layout>
