@@ -15,9 +15,9 @@ class RegistrationController extends Controller
 
     public function store(Request $request) {
         $formFields = $request->validate([
-            'name' => ['required'],
+            'name' => 'required',
             'email' => ['required', 'email', Rule::unique('users', 'email')],
-            'password' => ['required', 'confirmed']
+            'password' => 'required|confirmed'
         ]);
 
         $formFields['password'] = bcrypt($formFields['password']);
@@ -25,7 +25,7 @@ class RegistrationController extends Controller
 
         Auth()->login($user);
 
-        return redirect('/')->with('flash-alert', 'Registration successful!');
+        return redirect('/search')->with('flash-alert', 'Registration successful!');
     }
 
     public function login() {
@@ -35,7 +35,7 @@ class RegistrationController extends Controller
     public function authenticate(Request $request) {
         $formFields = $request->validate([
             'email' => ['required', 'email', Rule::unique('users', 'email')],
-            'password' => ['required']
+            'password' => 'required'
         ]);
 
         if (Auth()->attempt($formFields)) {

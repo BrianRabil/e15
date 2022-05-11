@@ -21,14 +21,14 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
-Route::get('/search', [SearchController::class, 'show']);
-Route::get('/dashboard', [DashboardController::class, 'show']);
-Route::get('/boxes', [BoxController::class, 'show']);
-Route::get('/pokemon/{id}', [PokemonDetailController::class, 'show']);
+Route::get('/search', [SearchController::class, 'show'])->middleware('auth');
+Route::get('/dashboard', [DashboardController::class, 'show'])->middleware('auth');
+Route::get('/boxes', [BoxController::class, 'show'])->middleware('auth');
+Route::get('/pokemon/{id}', [PokemonDetailController::class, 'show'])->middleware('auth');
 
 
 Route::get('/register', [RegistrationController::class, 'create']);
 Route::post('/users', [RegistrationController::class, 'store']);
-Route::get('/login', [RegistrationController::class, 'login']);
-Route::post('/authenticate', [RegistrationController::class, 'authenticate']);
-Route::post('/logout', [RegistrationController::class, 'logout']);
+Route::get('/login', [RegistrationController::class, 'login'])->name('login');
+Route::post('/authenticate', [RegistrationController::class, 'authenticate'])->middleware('auth');
+Route::post('/logout', [RegistrationController::class, 'logout'])->middleware('auth');
