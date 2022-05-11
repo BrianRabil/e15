@@ -15,16 +15,21 @@
                     </li>
                 @endforeach
                 <li>
-                    <button class="whitespace-nowrap text-blue-700 font-medium pl-6 pr-12 py-4 flex items-center justify-center gap-1 rounded">New collection</button>
+                    <a href="/collections/create" class="whitespace-nowrap text-blue-700 font-medium pl-6 pr-12 py-4 flex items-center justify-center gap-1 rounded">New collection</a>
                 </li>
             </ul>
             <div class="w-full">
                 <div class="flex w-full items-center px-8 py-6 border-b border-gray-100 justify-between">
-                    <h2 class="text-lg font-bold">
-                        {{ $active_collection->name }} 
-                    </h2> 
                     <div>
-                        <button class="text-gray-700 hover:text-gray-600">Edit</button>
+                        <h2 class="text-lg font-bold">
+                            {{ $active_collection->name }} 
+                        </h2> 
+                        <p class="text-sm text-gray-700">
+                            {{ $active_collection->description }}
+                        </p>
+                    </div>
+                    <div>
+                        <a href="/collections/edit/{{$collection->id}}" class="text-gray-700 hover:text-gray-600">Edit</a>
                     </div>
                 </div>
                 <div class="px-8 pt-4 pb-8">

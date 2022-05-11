@@ -37,6 +37,7 @@ class CollectionsSeeder extends Seeder
             $collection->created_at = $this->faker->dateTimeThisMonth();
             $collection->updated_at = $this->faker->dateTimeThisMonth();
             $collection->name = $collection_name;
+            $collection->description = $this->faker->realText(100);
 
             $collection->save();
 

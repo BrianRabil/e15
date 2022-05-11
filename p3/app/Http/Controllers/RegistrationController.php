@@ -43,7 +43,7 @@ class RegistrationController extends Controller
             return redirect('/search')->with('flash-alert', 'Login successful!');
         }
 
-        return back()->withErrors(['email' => 'Invalid login credentials.'])->onlyInput('email');
+        return redirect('/login')->withErrors(['email' => 'Invalid login credentials.'])->onlyInput('email');
     }
 
     public function logout(Request $request) {

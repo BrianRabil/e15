@@ -24,10 +24,14 @@ Route::get('/', function () {
 
 Route::get('/search', [SearchController::class, 'show'])->middleware('auth');
 Route::get('/dashboard', [DashboardController::class, 'show'])->middleware('auth');
-Route::get('/collections', [CollectionsController::class, 'show'])->middleware('auth');
-Route::get('/collections/{id}', [CollectionsController::class, 'show'])->middleware('auth');
 Route::get('/pokemon/{id}', [PokemonDetailController::class, 'show'])->middleware('auth');
 
+Route::get('/collections', [CollectionsController::class, 'show'])->middleware('auth');
+Route::get('/collections/create', [CollectionsController::class, 'create'])->middleware('auth');
+Route::post('/collections/store', [CollectionsController::class, 'store'])->middleware('auth');
+Route::put('/collections/store', [CollectionsController::class, 'store'])->middleware('auth');
+Route::get('/collections/edit/{id}', [CollectionsController::class, 'edit'])->middleware('auth');
+Route::get('/collections/{id}', [CollectionsController::class, 'show'])->middleware('auth');
 
 Route::get('/register', [RegistrationController::class, 'create']);
 Route::post('/users', [RegistrationController::class, 'store']);
