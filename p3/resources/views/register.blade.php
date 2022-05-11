@@ -9,7 +9,7 @@
                     <label id="name_label" class="text-gray-600 text-md">
                         Name<span class="text-red-600">*</span>
                     </label>
-                    <input value="{{ old('name') }}" name="name" type="text" aria-labelledby="name_label" autofocus
+                    <input value="{{ old('name') }}" name="name" type="text" aria-labelledby="name_label" autofocuphp artisan make:seeder UsersTableSeeders
                         class="border border-gray-300 rounded text-gray-800 px-3 py-2 bg-white shadow" />
                     @error('name')
                         <p class="text-red-700 text-xs">

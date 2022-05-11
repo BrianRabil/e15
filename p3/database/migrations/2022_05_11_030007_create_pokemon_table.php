@@ -17,15 +17,16 @@ return new class extends Migration
             $table->id();
             $table->timestamps();
 
-            // $table->array('abilities');
             $table->smallInteger('base_experience');
             $table->smallInteger('height');
             $table->string('name');
-            // $table->array('moves');
             $table->string('species');
-            // $table->array('sprites');
-            // $table->array('types');
+            $table->string('sprite');
             $table->smallInteger('weight');
+            // TODO: Create privot tables for these
+            // $table->array('types');
+            // $table->array('abilities');
+            // $table->array('moves');
 
             // +"abilities": array:2 [▶]
             // +"base_experience": 64
